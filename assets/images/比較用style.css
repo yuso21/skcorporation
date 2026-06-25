@@ -1,7 +1,6 @@
 @charset "utf-8";
 
 body {
-	height: 100%;
 	font-family: 'ヒラギノ角ゴシック', '游ゴシック', san-serif;
 	font-weight: 300;
 	margin: 0;
@@ -36,11 +35,6 @@ a {
 }
 a:hover {
 	color:#879EA7;
-	cursor: pointer;	
-}
-
-a img:hover {
-	opacity: 0.6;
 	cursor: pointer;	
 }
 
@@ -133,10 +127,6 @@ a img:hover {
 }
 
 
-.first-view {
-	overflow: hidden;
-}
-
 #catch-copyA {
 	font-size: 28px;
 	letter-spacing: 0.12em;
@@ -186,8 +176,8 @@ a img:hover {
 
 .about-us {
 	background-color: #0D4167;
-	height: auto;
-	padding: 105px 0;
+	height: 360px;
+	padding-top: 105px;
 	margin: 0px;
 }
 
@@ -195,10 +185,6 @@ a img:hover {
 	line-height: 50px;
 	margin-top: 24px;
 	font-size: 20px;
-}
-
-.sp-br {
-	display: none;
 }
 /* about usセクションここまで */
 
@@ -213,7 +199,6 @@ a img:hover {
 	background-size: cover;
 	padding-top: 140px;
 	padding-bottom: 100px;
-	overflow: hidden;
 }
 
 .service-txt{
@@ -250,12 +235,12 @@ a img:hover {
 }
 
 .service-txt-right{
-	width: 330px;
+	width: 320px;
 	float: right;
 }
 
 .service-txt-left{
-	width: 330px;
+	width: 320px;
 	float: left;
 }
 
@@ -332,7 +317,7 @@ figcaption {
 }
 
 #contact h2{
-	margin-bottom: 46px;
+	margin-bottom: 46;
 }
 
 #contact .form dl dt {
@@ -390,27 +375,23 @@ figcaption {
 	border: none;
 } */
 
-#contact button,#confirm button{
+#contact .form button{
 	background-color: #0D4167;
 	color: #ffffff;
+	width: 164px;
+	display: block;
 	text-align: center;
 	line-height: 50px;
 	border: 1px solid #7C8184;	
 	margin: 48px auto;
 }
 
-#contact button:hover,#confirm button:hover {
+#contact .form button:hover {
 	text-decoration: none;
 	background-color: #005488;
 	color: #ffffff;
 	cursor: pointer;
 }
-
-#contact button{
-	width: 164px;
-	display: block;
-}
-
 
 #contact .required::after{
 	content: " * ";
@@ -418,36 +399,6 @@ figcaption {
 }
 /* contactセクションここまで */
 
-/* confirmセクション始め */
-#confirm {
-	background-color: #DDE2E3;
-	min-height: calc(100vh - 350px);
-	padding: 60px 0;
-	margin-top: 40px;
-}
-
-#confirm h2{
-	margin-bottom: 46px;
-}
-
-.confirm-text{
-	width: 320px;
-	margin: 0 auto;
-}
-
-#confirm button{
-	width: 146px;
-	display: flexbox;
-	margin-right: 34px;
-}
-
-#confirm a{
-	text-decoration: underline;
-	margin-left: 16px;
-}
-
-
-/* confirmセクションここまで */
 
 /* recruitセクション始め */
 #recruit {
@@ -465,7 +416,7 @@ figcaption {
 }
 
 th {
-	width: 200px;
+	width: 144px;
 	padding: 21px 0 21px 44px;
 	font-size: 14px;
 	font-weight: 400;
@@ -475,8 +426,8 @@ th {
 }
 
 td {
-	width: 716px;
-	padding: 21px 32px 21px 44px;
+	width: 772px;
+	padding: 21px 44px 21px 44px;
 	font-size: 14px;
 	border-bottom: 1px solid #DDE2E3;
 }
@@ -507,8 +458,7 @@ table {
 /* corporate-profileセクション始め */
 #corporate-profile{
 	background-color: #FFFFFF;
-	padding: 96px 0 ;
-	overflow: hidden;
+	padding: 96px 0;
 }
 
 #corporate-profile h2::after{
@@ -554,7 +504,6 @@ table {
 
 /* フッタ */
 .footer {
-	position: sticky;
 	height: 72px;
 	padding:48px 0 0 44px;
 	text-align: left;
@@ -578,17 +527,16 @@ table {
 
 /* メディアクエリ追加 */
 @media screen and (max-width: 768px) {
+	#index {
+		background-image: url(../images/top_main.jpg);
+	}
 
     #header {
-		display: flex;
-		justify-content: flex-end;
-		align-items: center;
         height: auto;
         padding: 10px 0;
     }
     .logo {
         float: none;
-		width: 75%;
         text-align: center;
         margin: 0;
     }
@@ -600,7 +548,7 @@ table {
         text-align: center;
         background-color: #fff;
         position: absolute;
-        top: 38px; /* ヘッダーの高さ分下げる */
+        top: 76px; /* ヘッダーの高さ分下げる */
         left: 0;
     }
 
@@ -613,10 +561,7 @@ table {
     }
 
     .hamburger-menu {
-		z-index: 2;
-
         display: flex;
-		margin-right: 30px;
     }
 	
 
@@ -624,7 +569,7 @@ table {
 		font-size: 24px;
 		width: 380px;
 		height: 48px;
-		margin-top: 100px;
+		margin-top: 300px;
 		padding: 8px 0 0 30px;
 	}
 	#catch-copyB {
@@ -632,7 +577,7 @@ table {
 		width: 350px;
 		height: 48px;
 		margin-top: 20px;
-		margin-bottom: 130px;
+		margin-bottom: 150px;
 		padding: 8px 0 0 30px;
 	}
 
@@ -641,23 +586,9 @@ table {
         padding: 0 20px;
     }
 
-	#about-us-txt {
-		margin: 0 30px;
-	}
-
-	.sp-br {
-		display: block;
-	}
-
-	#service{
-		background-image: none;
-		background-color: #fff;
-	}
-
     .service-txt {
         width: 80%;
         float: none;
-		margin-bottom: 100px;
     }
 
 	.service-txt-right{
@@ -730,15 +661,6 @@ table {
 	#contact .form textarea {
 		width: 90%;
 		height: 344px;
-	}
-
-	#confirm {
-		margin-top: 0px;
-	}
-	
-
-	#corporate-profile{
-		padding: 96px 0 10px 0 ;
 	}
 
 	.recruit-image img {
