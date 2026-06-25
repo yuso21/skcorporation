@@ -20,12 +20,19 @@ include 'inc/head.php';
 	<div id="wrap">
 		<div class="content fadeUp">
 			<div class="first-view">
+			  <div class="hero-overlay"></div>
 			  <div id="catch-copy">
-			    <p id="catch-copyA">いつまでも、美しく。</p>
-			    <p id="catch-copyB">いつでも、心地よく。</p>
+			    <span class="hero-sub-title">SK CORPORATION</span>
+			    <div class="hero-title-wrap">
+			      <p id="catch-copyA" class="hero-title">いつまでも、美しく。</p>
+			    </div>
+			    <div class="hero-title-wrap">
+			      <p id="catch-copyB" class="hero-title">いつでも、心地よく。</p>
+			    </div>
+			    <p class="hero-desc">札幌市を中心に、建物の美観と快適な環境を提供するビルメンテナンスサービス</p>
 			  </div>
 			  <p class="scrolltxt center englishS ">SCROLL</p>
-      </div>
+			</div>
 
       <!-- sec1 -->
       <section class="about-us center white clearfix">
