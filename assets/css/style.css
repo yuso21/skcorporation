@@ -270,27 +270,20 @@ a img:hover {
 	}
 }
 
-/* about usセクション始め */
-.about-us::before{
-	content: "";
-	display: block;
-	width: 2px;
-	height: 60px;
-	background-color: #fff;
-	margin: -105px auto 60px auto;
-}
-
 .about-us {
-	background-color: #0D4167;
+	background: linear-gradient(135deg, #0D4167 0%, #06233c 100%);
 	height: auto;
-	padding: 105px 0;
+	padding: 140px 0;
 	margin: 0px;
 }
 
 #about-us-txt {
-	line-height: 50px;
-	margin-top: 24px;
-	font-size: 20px;
+	line-height: 2.2;
+	margin-top: 32px;
+	font-size: 22px;
+	letter-spacing: 0.12em;
+	font-weight: 300;
+	color: rgba(255, 255, 255, 0.95);
 }
 
 .sp-br {
@@ -325,14 +318,18 @@ a img:hover {
 #service h2::after{
 	content: "";
 	display: block;
-	width: 24px;
-	height: 2px;
+	width: 40px;
+	height: 3px;
 	background-color: #0D4167;
-	margin: 0 auto;
+	margin: 20px auto 0 auto;
+	border-radius: 2px;
 }
 
 #service h3{
 	color: #0D4167;
+	font-size: 26px;
+	font-weight: 600;
+	margin-bottom: 24px;
 }
 
 #service h3::before{
@@ -340,9 +337,9 @@ a img:hover {
 	content: counter(number,decimal-leading-zero)"";
 	font-family: 'urw-din', san-serif;
 	font-weight: 600;
-	font-size: 24px;
-	color: #0D4167;
-	padding-right: 10px;
+	font-size: 28px;
+	color: #879EA7;
+	padding-right: 15px;
 }
 
 .service-txt-right{
@@ -361,6 +358,17 @@ a img:hover {
 
 .right-photo{
 	float: right;
+}
+
+.left-photo, .right-photo {
+	border-radius: 8px;
+	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+	transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.left-photo:hover, .right-photo:hover {
+	transform: translateY(-5px);
+	box-shadow: 0 20px 40px rgba(13, 65, 103, 0.15);
 }
 
 #service h4{
@@ -445,14 +453,31 @@ figcaption {
 
 #contact .form input {
 	width: 640px;
-	height: 30px;
-	border: none;
+	height: 48px;
+	border: 1px solid #c8d3d5;
+	border-radius: 4px;
+	padding: 0 16px;
+	box-sizing: border-box;
+	transition: all 0.3s ease;
+	font-size: 15px;
 }
 
 #contact .form textarea {
 	width: 640px;
-	height: 344px;
-	border: none;
+	height: 244px;
+	border: 1px solid #c8d3d5;
+	border-radius: 4px;
+	padding: 16px;
+	box-sizing: border-box;
+	transition: all 0.3s ease;
+	font-size: 15px;
+	resize: vertical;
+}
+
+#contact .form input:focus, #contact .form textarea:focus {
+	border-color: #0D4167;
+	box-shadow: 0 0 0 3px rgba(13, 65, 103, 0.1);
+	outline: none;
 }
 
 /*上記に改良（input textarea）*/
@@ -491,13 +516,18 @@ figcaption {
 	color: #ffffff;
 	text-align: center;
 	line-height: 50px;
-	border: 1px solid #7C8184;	
+	border: 1px solid #0D4167;	
+	border-radius: 4px;
 	margin: 48px auto;
+	font-weight: 600;
+	letter-spacing: 0.1em;
+	transition: all 0.3s ease;
 }
 
 #contact button:hover,#confirm button:hover {
 	text-decoration: none;
 	background-color: #005488;
+	border-color: #005488;
 	color: #ffffff;
 	cursor: pointer;
 }
@@ -561,25 +591,32 @@ figcaption {
 }
 
 th {
-	width: 200px;
-	padding: 21px 0 21px 44px;
-	font-size: 14px;
-	font-weight: 400;
+	width: 220px;
+	padding: 24px 30px;
+	font-size: 15px;
+	font-weight: 600;
+	color: #0D4167;
 	text-align: left;
-	border-bottom: 1px solid #DDE2E3;
-	
+	border-bottom: 1px solid #EAEAEA;
+	background-color: #FAFBFC;
 }
 
 td {
-	width: 716px;
-	padding: 21px 32px 21px 44px;
-	font-size: 14px;
-	border-bottom: 1px solid #DDE2E3;
+	padding: 24px 30px;
+	font-size: 15px;
+	color: #515353;
+	border-bottom: 1px solid #EAEAEA;
+	line-height: 1.6;
 }
 
 table {
 	border-spacing: 0;
-	margin: 0 auto;
+	margin: 40px auto 0 auto;
+	width: 100%;
+	max-width: 900px;
+	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
+	border-radius: 8px;
+	overflow: hidden;
 }
 
 .recruit-image {
